@@ -89,7 +89,7 @@ const Index: FC = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 px-4">
       <div className="relative bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-3xl shadow-2xl p-10 max-w-md w-full">
-        <a href="https://www.200597.xyz/" className="text-4xl font-extrabold text-white mb-8 text-center drop-shadow-lg underline decoration-white decoration-2" style={{ textDecorationThickness: '2px', textUnderlineOffset: '4px' }}>
+        <a href="https://www.200597.xyz/" className="text-4xl font-extrabold text-white mb-8 text-center drop-shadow-lg underline decoration-white decoration-2" style={{ textDecorationThickness: '2px', textUnderlineOffset: '8px' }}>
           小洛の文生图
         </a>
         <div className="mb-4"></div>
@@ -162,7 +162,7 @@ const Index: FC = () => {
             <button
               type="button"
               onClick={handleEnhanceToggle}
-              className={`flex-1 px-5 py-3 rounded-xl text-lg font-semibold text-white border border-white transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400
+              className={`flex-1 px-5 py-3 rounded-xl text-lg font-semibold text-white border border-white bg-transparent transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400
                           ${enhance ? "bg-transparent" : "bg-transparent"}`}
               disabled={isSubmitting}
             >
@@ -179,7 +179,7 @@ const Index: FC = () => {
             </button>
             <button
               type="submit"
-              className={`flex-1 px-5 py-3 rounded-xl text-lg font-semibold text-white border border-white transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-400
+              className={`flex-1 px-5 py-3 rounded-xl text-lg font-semibold text-white border border-white bg-transparent transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-400
                           ${isSubmitting ? "bg-gray-500 cursor-not-allowed" : "bg-transparent"}`}
               disabled={isSubmitting}
             >
