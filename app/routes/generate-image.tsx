@@ -96,9 +96,10 @@ const GenerateImage: FC = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 px-4">
       <div className="relative bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-3xl shadow-2xl p-10 max-w-md w-full">
-        <a href="https://www.200597.xyz/" className="text-4xl font-extrabold text-white mb-8 text-center drop-shadow-lg underline">
+        <a href="https://www.200597.xyz/" className="text-4xl font-extrabold text-white mb-8 text-center drop-shadow-lg underline decoration-white decoration-2">
           小洛の文生图
         </a>
+        <div className="mb-4"></div>
         <Form method="post" className="space-y-8" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="prompt" className="block text-white text-lg font-semibold mb-3">
@@ -127,7 +128,7 @@ const GenerateImage: FC = () => {
               className="w-full px-5 py-3 rounded-xl border border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-white bg-opacity-20 text-white transition duration-300 ease-in-out hover:bg-opacity-30"
             >
               {models.map((model) => (
-                <option key={model.id} value={model.id}>
+                <option key={model.id} value={model.id} className="bg-gray-800 text-white">
                   {model.id}
                 </option>
               ))}
@@ -169,7 +170,7 @@ const GenerateImage: FC = () => {
               type="button"
               onClick={handleEnhanceToggle}
               className={`flex-1 px-5 py-3 rounded-xl text-lg font-semibold text-white transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400
-                          ${enhance ? "bg-gradient-to-r from-green-400 to-green-600" : "bg-gradient-to-r from-gray-400 to-gray-600"}`}
+                          ${enhance ? "bg-transparent" : "bg-transparent"}`}
               disabled={isSubmitting}
             >
               {enhance ? "已强化提示词" : "是否强化提示词"}
@@ -178,7 +179,7 @@ const GenerateImage: FC = () => {
             <button
               type="button"
               onClick={handleReset}
-              className="flex-1 px-5 py-3 rounded-xl text-lg font-semibold text-white bg-gradient-to-r from-yellow-400 to-yellow-600 transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              className="flex-1 px-5 py-3 rounded-xl text-lg font-semibold text-white bg-transparent transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-400"
               disabled={isSubmitting}
             >
               重置
@@ -186,7 +187,7 @@ const GenerateImage: FC = () => {
             <button
               type="submit"
               className={`flex-1 px-5 py-3 rounded-xl text-lg font-semibold text-white transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-400
-                          ${isSubmitting ? "bg-gray-500 cursor-not-allowed" : "bg-gradient-to-r from-indigo-500 to-indigo-700"}`}
+                          ${isSubmitting ? "bg-gray-500 cursor-not-allowed" : "bg-transparent"}`}
               disabled={isSubmitting}
             >
               {isSubmitting ? "生成中..." : "提交"}
