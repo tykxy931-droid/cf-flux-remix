@@ -9,9 +9,7 @@ import {
 
 import "./tailwind.css";
 
-export const links: LinksFunction = () => [
-  // 移除 Google Fonts 相关链接
-];
+export const links: LinksFunction = () => [];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
