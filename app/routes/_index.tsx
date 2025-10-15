@@ -90,7 +90,7 @@ const Index: FC = () => {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 px-4">
       <div className="relative bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-3xl shadow-2xl p-10 max-w-md w-full">
         <a href="https://www.200597.xyz/" className="text-4xl font-extrabold text-white mb-8 text-center drop-shadow-lg underline decoration-white decoration-2" style={{ textDecorationThickness: '2px', textUnderlineOffset: '8px' }}>
-          小洛の文生图
+          TTの文生图
         </a>
         <div className="mb-4"></div>
         <Form method="post" className="space-y-8" onSubmit={handleSubmit}>
